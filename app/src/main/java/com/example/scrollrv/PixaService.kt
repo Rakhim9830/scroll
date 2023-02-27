@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class PixaService {
-    val retrofit = Retrofit.Builder().baseUrl("https://pixabay.com/api/").addConverterFactory(
+   private var retrofit = Retrofit.Builder().baseUrl("https://pixabay.com/").addConverterFactory(
         GsonConverterFactory.create()
     ).build()
 

@@ -1,16 +1,15 @@
 package com.example.scrollrv
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.example.scrollrv.databinding.ItemImageBinding
 
-class PixAdapter(var list: java.util.ArrayList<Hit>): Adapter<PixAdapter.PixaViewHolder>() {
+class PixAdapter(private var list: java.util.ArrayList<Hit>): Adapter<PixAdapter.PixaViewHolder>() {
 
-    class PixaViewHolder(var binding:ItemImageBinding): ViewHolder(binding.root){
+    class PixaViewHolder(private var binding:ItemImageBinding): ViewHolder(binding.root){
         fun onBind(hit: Hit){
             binding.imageV.load(hit.largeImageUrl)
         }
